@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ll_wm_hw_v"
+    >
+
+    <TextView
+        style="@style/m"
+        android:id="@+id/elv_tv"
+        android:layout_height="30dp"
+        android:background="#ffD8D8D8"
+        android:paddingLeft="10dp"
+          android:textSize="15sp" 
+         android:gravity="left|center" 
+        android:text="tag" 
+        android:clickable="false"
+        />
+
+
+</LinearLayout>

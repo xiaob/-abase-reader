@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ll_m_v"
+    android:background="@drawable/bg_default_white" >
+
+    <include layout="@layout/head" />
+
+    <RelativeLayout style="@style/ll_m_v" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            style="@style/wm_hw" >
+
+            <TextView
+                android:id="@+id/tv"
+                style="@style/w"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:text="path"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:width="200dp" >
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                style="@style/w" >
+
+                <LinearLayout
+                    style="@style/ll_w_h"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/iv_back" >
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="25dp"
+                        android:background="#33313131" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="20dp"
+                        android:background="#33ffffff" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_up"
+                    style="@style/w"
+                    android:layout_alignParentRight="true"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:text="上一级"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    style="@style/w"
+                    android:layout_toLeftOf="@+id/tv_up"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/local_up" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            style="@style/m"
+            android:layout_below="@id/rl_title" >
+            
+            <ImageView 
+                android:visibility="gone"
+                android:id="@+id/iv_empty"
+                style="@style/w"
+                android:layout_gravity="center"
+                android:src="@drawable/file_empty"
+                />
+
+            <ExpandableListView
+                android:id="@+id/elv"
+                style="@style/wm_hw"
+                android:cacheColorHint="#00000000"
+                android:childDivider="@drawable/line_h"
+                android:divider="@drawable/line_h"
+                android:listSelector="@drawable/lv_bg" >
+            </ExpandableListView>
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

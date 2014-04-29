@@ -1,0 +1,14 @@
+default.properties
+build.properties
+local.properties
+bin/
+gen/
+scripts/resources/*.diff
+obj/
+epubs/
+mappings/
+READY/
+.classpath
+.settings
+*.so
+*~

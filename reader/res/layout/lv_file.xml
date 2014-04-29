@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ll_wm_hw_v"
+    android:gravity="left|center" >
+
+    <LinearLayout style="@style/ll_wm_hw_h" 
+        android:padding="10dp"
+        android:layout_height="60dp"
+        >
+
+        <ImageView
+            android:id="@+id/lv_iv"
+            style="@style/w"
+            android:src="@drawable/file_type_chm" />
+        <!-- 用于显示文件名的文本框 -->
+
+        <TextView
+            android:paddingLeft="10dp"
+            android:id="@+id/lv_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

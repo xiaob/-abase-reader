@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- layout  width height -->
+    <style name="w">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="m">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="wm_hw" parent="m">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ww_hm" parent="m">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="ll_wm_hw_v" parent="wm_hw">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ll_wm_hw_h" parent="wm_hw">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ll_m_v" parent="m">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ll_m_h" parent="m">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ll_w_h" parent="w">
+        <item name="android:orientation">horizontal</item>
+    </style>
+      <style name="ll_w_v" parent="w">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_out</item>
+    </style>
+
+    <style name="MyDialogStyleBottom" parent="android:Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="line_h">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@drawable/line_h</item>
+    </style>
+
+    <style name="line_v">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/line_v</item>
+    </style>
+
+      
+      <!-- textview -->
+     
+     <style name="tv"> 
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>     
+        <item name="android:textColor">@color/black</item>
+     </style> 
+      
+     <!--  seek bar  -->
+      <style name="sb_h" parent="@android:style/Widget.ProgressBar.Horizontal">
+          <item name="android:progressDrawable">@drawable/seek_bar</item>
+        <item name="android:thumb">@drawable/seek_bar_thumb</item>
+    </style>
+    
+    
+      <!-- checkbox -->
+
+    <style name="checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        
+    </style>
+    
+    
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ll_m_v"
+    android:background="@drawable/bg_default_white" >
+
+    <RelativeLayout style="@style/ll_m_v" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            style="@style/wm_hw"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_head_left"
+                style="@style/w"
+                android:src="@drawable/btn_back" />
+
+            <TextView
+                android:id="@+id/tv_head"
+                style="@style/w"
+                android:layout_toRightOf="@+id/iv_head_left"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:text="title"
+                android:textColor="@color/black"
+                android:textSize="18sp" >
+            </TextView>
+        </RelativeLayout>
+
+        <View
+            style="@style/line_h"
+            android:layout_below="@id/rl_title" />
+
+        <FrameLayout
+            style="@style/m"
+            android:layout_below="@id/rl_title" >
+
+
+            <ProgressBar
+                android:id="@+id/pb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@anim/loading" />
+
+            <ListView
+                android:id="@+id/lv"
+                style="@style/wm_hw"
+                android:cacheColorHint="#00000000"
+                android:fastScrollEnabled="true"
+                android:divider="@drawable/recommend_line"
+                android:listSelector="@drawable/lv_bg" >
+            </ListView>
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>
