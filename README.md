@@ -1,9 +1,9 @@
 #abase-reader
 
->基于<a  href="http://git.oschina.net/jayqqaa12/abase">Abase android快速开发工具 </a> 
->基于 Fbreader 项目
->界面参考ireader
->不断更新中
+>基于<a  href="http://git.oschina.net/jayqqaa12/abase">Abase android快速开发工具 </a> <br>
+>基于 Fbreader 项目 <br>
+>界面参考ireader <br>
+>不断更新中 <br>
 
 
 
