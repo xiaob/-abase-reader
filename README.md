@@ -23,10 +23,13 @@
 
 
 
+<br>
 ## 捐赠
-如果您喜欢本项目，认为本项目确实给您带来方便和帮助非常感谢，您的捐赠，是我们前进的动力<br>
+如果您喜欢本项目<br> 
+认为本项目确实给您带来方便和帮助非常感谢 <br>
+您的捐赠，是我们前进的动力<br>
 <a href='https://me.alipay.com/12shu'> <img src='https://img.alipay.com/sys/personalprod/style/mc/btn-index.png' /> </a>
-
+<br>
 
 
 #其他开源项目
