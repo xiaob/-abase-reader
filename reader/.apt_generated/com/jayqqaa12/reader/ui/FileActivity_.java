@@ -19,7 +19,6 @@ import android.widget.TextView;
 import com.jayqqaa12.reader.R.id;
 import com.jayqqaa12.reader.R.layout;
 import com.jayqqaa12.reader.engine.FileEngine_;
-import com.jayqqaa12.reader.ui.adapter.FileAdapter_;
 import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
@@ -43,7 +42,6 @@ public final class FileActivity_
     private void init_(Bundle savedInstanceState) {
         OnViewChangedNotifier.registerOnViewChangedListener(this);
         engine = FileEngine_.getInstance_(this);
-        adapter = FileAdapter_.getInstance_(this);
     }
 
     @Override
@@ -74,13 +72,13 @@ public final class FileActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        iv_head_left = ((ImageView) hasViews.findViewById(id.iv_head_left));
         tv_head_logo = ((TextView) hasViews.findViewById(id.tv_head_logo));
         iv_head_right = ((ImageView) hasViews.findViewById(id.iv_head_right));
         tv_head = ((TextView) hasViews.findViewById(id.tv_head));
-        iv_head_left = ((ImageView) hasViews.findViewById(id.iv_head_left));
+        elv = ((ExpandableListView) hasViews.findViewById(id.elv));
         iv_empty = ((ImageView) hasViews.findViewById(id.iv_empty));
         tv = ((TextView) hasViews.findViewById(id.tv));
-        elv = ((ExpandableListView) hasViews.findViewById(id.elv));
         {
             View view = hasViews.findViewById(id.iv_head_left);
             if (view!= null) {

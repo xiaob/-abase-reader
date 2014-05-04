@@ -9,9 +9,9 @@ import java.util.Set;
 
 import org.androidannotations.annotations.EBean;
 
+import com.jayqqaa12.abase.model.Group;
 import com.jayqqaa12.abase.util.common.T;
 import com.jayqqaa12.reader.model.BookFile;
-import com.jayqqaa12.reader.model.Group;
 
 @EBean
 public class FileEngine

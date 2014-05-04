@@ -7,9 +7,9 @@ import android.content.Context;
 import android.widget.TextView;
 
 import com.jayqqaa12.abase.core.adapter.ItemView;
+import com.jayqqaa12.abase.model.Group;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.BookFile;
-import com.jayqqaa12.reader.model.Group;
 
 @EViewGroup(R.layout.elv_file)
 public class FileGroupItemView extends ItemView<Group<BookFile>>

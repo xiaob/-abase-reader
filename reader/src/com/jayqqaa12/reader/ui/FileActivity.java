@@ -19,17 +19,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jayqqaa12.abase.core.AbaseDao;
+import com.jayqqaa12.abase.core.adapter.AbaseExpandableListAdapter;
+import com.jayqqaa12.abase.model.Group;
 import com.jayqqaa12.abase.util.IntentUtil;
-import com.jayqqaa12.abase.util.common.L;
 import com.jayqqaa12.abase.util.common.T;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.BaseActivity;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.engine.FileEngine;
 import com.jayqqaa12.reader.model.BookFile;
-import com.jayqqaa12.reader.model.Group;
 import com.jayqqaa12.reader.model.db.Book;
-import com.jayqqaa12.reader.ui.adapter.FileAdapter;
+import com.jayqqaa12.reader.ui.adapter.itemview.FileGroupItemView;
+import com.jayqqaa12.reader.ui.adapter.itemview.FileItemView;
 import com.jayqqaa12.reader.ui.view.dialog.DeleteBookDialog;
 import com.lidroid.xutils.db.sqlite.Selector;
 
@@ -44,14 +45,17 @@ public class FileActivity extends BaseActivity implements OnChildClickListener, 
 	ImageView iv_empty;
 	@Bean
 	FileEngine engine;
-	@Bean
-	FileAdapter adapter;
+	
+	AbaseExpandableListAdapter<BookFile>  adapter;
+	
 	private AbaseDao db = AbaseDao.create();
 	private String parentFile;
 
 	@AfterViews
 	public void init()
 	{
+		adapter= new AbaseExpandableListAdapter<BookFile>(FileGroupItemView.class, FileItemView.class, this);
+				
 		elv.setAdapter(adapter);
 		elv.setGroupIndicator(null);
 		setFileView(Environment.getExternalStorageDirectory().getPath());

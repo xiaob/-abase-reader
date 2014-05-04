@@ -67,8 +67,8 @@ public final class MenuItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        m_iv = ((ImageView) hasViews.findViewById(id.m_iv));
         m_tv = ((TextView) hasViews.findViewById(id.m_tv));
+        m_iv = ((ImageView) hasViews.findViewById(id.m_iv));
     }
 
 }

@@ -10,6 +10,13 @@
 
 请同时下载  <a  href="http://git.oschina.net/jayqqaa12/abase">Abase </a> <br> 项目加入到你的workspace 即可
 
+打开eclipse注解编译开关 如图<br>
+
+![Screenshot 1](http://git.oschina.net/jayqqaa12/abase-reader/raw/master/Screenshot/6.jpg "Screenshot 7") <br> <br>
+![Screenshot 1](http://git.oschina.net/jayqqaa12/abase-reader/raw/master/Screenshot/7.jpg "Screenshot 8") <br> <br>
+
+关于注解请参考abase介绍
+
 
 #界面预览 
 

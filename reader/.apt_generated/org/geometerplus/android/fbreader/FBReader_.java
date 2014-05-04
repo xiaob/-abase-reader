@@ -72,8 +72,8 @@ public final class FBReader_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        root_view = ((RelativeLayout) hasViews.findViewById(id.root_view));
         main_view = ((ZLAndroidWidget) hasViews.findViewById(id.main_view));
+        root_view = ((RelativeLayout) hasViews.findViewById(id.root_view));
         init();
     }
 
