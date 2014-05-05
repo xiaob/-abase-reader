@@ -12,8 +12,8 @@
 
 打开eclipse注解编译开关 如图<br>
 
-![Screenshot 1](http://git.oschina.net/jayqqaa12/abase-reader/raw/master/Screenshot/7.jpg "Screenshot 7") <br> <br>
-![Screenshot 1](http://git.oschina.net/jayqqaa12/abase-reader/raw/master/Screenshot/8.jpg "Screenshot 8") <br> <br>
+![Screenshot 1](http://git.oschina.net/jayqqaa12/abase-reader/raw/master/Screenshot/6.jpg "Screenshot 7") <br> <br>
+![Screenshot 1](http://git.oschina.net/jayqqaa12/abase-reader/raw/master/Screenshot/7.jpg "Screenshot 8") <br> <br>
 
 关于注解请参考abase介绍
 
