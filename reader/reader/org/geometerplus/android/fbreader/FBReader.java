@@ -3,8 +3,6 @@ package org.geometerplus.android.fbreader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Bean;
@@ -25,7 +23,6 @@ import org.geometerplus.fbreader.fbreader.FBReaderApp;
 import org.geometerplus.fbreader.fbreader.options.CancelMenuHelper;
 import org.geometerplus.zlibrary.core.application.ZLApplicationWindow;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
-import org.geometerplus.zlibrary.core.resources.ZLResource;
 import org.geometerplus.zlibrary.core.view.ZLViewWidget;
 import org.geometerplus.zlibrary.text.view.ZLTextView;
 import org.geometerplus.zlibrary.ui.android.error.ErrorKeys;
@@ -35,7 +32,6 @@ import org.geometerplus.zlibrary.ui.android.view.AndroidFontUtil;
 import org.geometerplus.zlibrary.ui.android.view.ZLAndroidWidget;
 
 import android.app.Activity;
-import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -43,18 +39,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.PowerManager;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import com.jayqqaa12.abase.view.AbasePopup;
+import com.jayqqaa12.abase.view.APopup;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.ui.view.pop.MenuPop;
 import com.jayqqaa12.reader.ui.view.pop.itemview.ProgressItemView;
@@ -97,7 +90,7 @@ public class FBReader extends Activity implements ZLApplicationWindow
 	@Bean
 	MenuPop menu;
 
-	AbasePopup progressPop;
+	APopup progressPop;
 
 	@AfterViews
 	protected void init()
@@ -115,7 +108,7 @@ public class FBReader extends Activity implements ZLApplicationWindow
 		myFBReaderApp.setWindow(this);
 		myFBReaderApp.initWindow();
 		
-		progressPop = new AbasePopup(ProgressItemView.class);
+		progressPop = new APopup(ProgressItemView.class);
 		
 		myFullScreenFlag = getZLibrary().ShowStatusBarOption.getValue() ? 0 : WindowManager.LayoutParams.FLAG_FULLSCREEN;
 

@@ -1,14 +1,16 @@
 package com.jayqqaa12.reader.ui;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import android.app.Activity;
 import android.widget.GridView;
 
-import com.jayqqaa12.abase.core.AbaseDao;
-import com.jayqqaa12.abase.core.adapter.AbaseBaseAdapter;
+import com.igexin.sdk.PushManager;
+import com.jayqqaa12.abase.core.ADao;
+import com.jayqqaa12.abase.core.activity.AAdapter;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.db.Book;
 import com.jayqqaa12.reader.ui.adapter.itemview.BookItemView;
@@ -18,18 +20,21 @@ public class MainActivity extends Activity
 {
 	@ViewById
 	GridView gv;
-	AbaseBaseAdapter<Book> adapter;
-	
-	private AbaseDao db = AbaseDao.create();
+	AAdapter<Book> adapter;
+
+	@Bean
+	ADao db;
 
 	@AfterViews
 	public void init()
 	{
-		adapter = new AbaseBaseAdapter<Book>(BookItemView.class,this);
+		// start push service
+		PushManager.getInstance().initialize(this);
+
+		adapter = new AAdapter<Book>(BookItemView.class, this);
 		gv.setAdapter(adapter);
 		setData();
 	}
-	
 
 	@Override
 	protected void onResume()

@@ -4,7 +4,6 @@
     
      <color name="textcolor">#ffc9c9c9</color>
     <color name="black_shade">#ff515151</color>
-    <color name="main_title_shade_line">#ff353D43</color>
     
     <color name="white">#ffffffff</color>
     <color name="green">#ff98E532</color>
@@ -12,44 +11,11 @@
     <color name="oranage">#ffFF7200</color>
     
     
-    
-    
     <color name="black">#030303</color>
     <color name="light_blue">#1C86EE</color>
-    <color name="white">#FFFFFF</color>
     <color name="textview_bg">#FFFAFA</color>
     
-    <!-- bicycle green -->
-    <color name="color_bicycle">#228B22</color>
-    
-    <!-- foot  blue -->
-    <color name="color_foot">#436EEE</color>
-    
-    <!-- invehicle red -->
-    <color name="color_invehicle">#FF0000</color>
-    
-    <!-- still -->
-    <color name="color_still">#FF7F00</color>
-    
-    <!-- tliting -->
-    <color name="color_tlit">#555555</color>
-    
-    <!-- unknown -->
-    <color name="color_unknown">#000000</color>
-    
-    
-	<color name="button_selector_pressed">#ffaa00</color>
-	<color name="background_color">#fefff3</color>
-	<color name="text_color">#000000</color>
-	<color name="rsblue">#075c93</color>
-	<color name="medium_grey">#CACACA</color>
-	<color name="icon_divider">#4380a8</color>
-	
-	<color name="white_green">#cde6c7</color>
-    <color name="black_iron">#281f1d</color>
-    <color name="zongse">#616130</color>
-    <color name="bgcolor">#404040</color>
-    <color name="light_red">#FFFFFF</color>
+ 
     
 
 </resources>

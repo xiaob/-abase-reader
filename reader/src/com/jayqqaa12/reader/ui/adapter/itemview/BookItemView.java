@@ -11,8 +11,8 @@ import android.content.Context;
 import android.view.View;
 import android.widget.Button;
 
-import com.jayqqaa12.abase.core.adapter.ItemView;
-import com.jayqqaa12.abase.util.IntentUtil;
+import com.jayqqaa12.abase.core.ItemView;
+import com.jayqqaa12.abase.kit.IntentKit;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.db.Book;
@@ -46,7 +46,7 @@ public class BookItemView extends ItemView<Book>
 				@Override
 				public void onClick(View v)
 				{
-					IntentUtil.startSubIntent(getContext(), FileActivity.class);
+					IntentKit.startSubIntent(getContext(), FileActivity.class);
 					((Activity) getContext()).overridePendingTransition(R.anim.activity_right_in, R.anim.keep_x);
 				}
 			});
@@ -60,7 +60,7 @@ public class BookItemView extends ItemView<Book>
 				{
 					App.setObject("delete_book", book);
 					if (new File(book.path).exists()) App.openBook(getContext(), book);
-					else IntentUtil.startSubIntent(getContext(), DeleteBookDialog.class, new String[] {  "MSG" }, new Object[] { 
+					else IntentKit.startSubIntent(getContext(), DeleteBookDialog.class, new String[] {  "MSG" }, new Object[] { 
 							DeleteBookDialog.DELETE_BOOK });
 
 				}
@@ -71,7 +71,7 @@ public class BookItemView extends ItemView<Book>
 				public boolean onLongClick(View v)
 				{
 					App.setObject("delete_book", book);
-					IntentUtil.startSubIntent(getContext(), DeleteBookDialog.class, new String[] { "MSG" }, new Object[] { 
+					IntentKit.startSubIntent(getContext(), DeleteBookDialog.class, new String[] { "MSG" }, new Object[] { 
 							DeleteBookDialog.DELETE_BOOK_AND_FILE });
 					return true;
 				}

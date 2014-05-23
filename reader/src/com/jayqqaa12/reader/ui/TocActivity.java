@@ -15,10 +15,9 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.jayqqaa12.abase.core.adapter.AbaseBaseAdapter;
+import com.jayqqaa12.abase.core.activity.AAdapter;
 import com.jayqqaa12.abase.core.listener.OnLoadStatus;
-import com.jayqqaa12.abase.util.MsgUtil;
-import com.jayqqaa12.abase.util.common.L;
+import com.jayqqaa12.abase.kit.MsgKit;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.BaseActivity;
 import com.jayqqaa12.reader.R;
@@ -37,13 +36,13 @@ public class TocActivity extends BaseActivity implements OnLoadStatus
 	@Bean
 	TocEngine engine;
 
-	AbaseBaseAdapter<Toc> adapter;
+	AAdapter<Toc> adapter;
 	final FBReaderApp fbreaderApp = (FBReaderApp) FBReaderApp.Instance();
 
 	@AfterViews
 	public void init()
 	{
-		adapter = new AbaseBaseAdapter<Toc>(TocItemView.class, this);
+		adapter = new AAdapter<Toc>(TocItemView.class, this);
 		tv_head.setText(App.getNowReadBook().name);
 		lv.setAdapter(adapter);
 		List<Toc> data = App.getNowReadBook().tocList.load();
@@ -79,7 +78,7 @@ public class TocActivity extends BaseActivity implements OnLoadStatus
 	{
 		switch (what)
 		{
-		case MsgUtil.MSG_LOAD:
+		case MsgKit.MSG_LOAD:
 			setData(TocEngine.tocList);
 			break;
 		}

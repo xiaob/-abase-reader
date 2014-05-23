@@ -9,7 +9,7 @@ import android.content.Context;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jayqqaa12.abase.core.adapter.ItemView;
+import com.jayqqaa12.abase.core.ItemView;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.BookFile;
 

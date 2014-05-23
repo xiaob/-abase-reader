@@ -40,7 +40,7 @@ import org.geometerplus.zlibrary.text.model.ZLTextMark;
 import org.geometerplus.zlibrary.text.model.ZLTextModel;
 import org.geometerplus.zlibrary.text.model.ZLTextParagraph;
 
-import com.jayqqaa12.abase.util.common.L;
+import com.jayqqaa12.abase.kit.common.L;
 import com.jayqqaa12.reader.App;
 
 public abstract class ZLTextView extends ZLTextViewBase

@@ -1,18 +1,15 @@
 package com.jayqqaa12.reader.ui;
 
-import org.androidannotations.annotations.AfterInject;
 import org.androidannotations.annotations.EActivity;
 
-import com.jayqqaa12.abase.core.activity.AbaseActivity;
+import com.jayqqaa12.abase.core.activity.AActivity;
 
 @EActivity
-public class SplashAcitivty extends AbaseActivity
+public class SplashAcitivty extends AActivity
 {
 	
 	
-	
-	
-	@AfterInject
+	@Override
 	protected void init(){
 		
 		

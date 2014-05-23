@@ -18,10 +18,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
 import com.jayqqaa12.abase.core.Abase;
-import com.jayqqaa12.abase.core.adapter.AbaseBaseAdapter;
-import com.jayqqaa12.abase.util.IntentUtil;
-import com.jayqqaa12.abase.util.ManageUtil;
-import com.jayqqaa12.abase.view.AbasePopup;
+import com.jayqqaa12.abase.core.activity.AAdapter;
+import com.jayqqaa12.abase.kit.IntentKit;
+import com.jayqqaa12.abase.kit.ManageKit;
+import com.jayqqaa12.abase.view.APopup;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.MenuItem;
@@ -29,7 +29,7 @@ import com.jayqqaa12.reader.ui.TocActivity;
 import com.jayqqaa12.reader.ui.adapter.itemview.MenuItemView;
 
 @EBean
-public class MenuPop extends AbasePopup implements OnItemClickListener
+public class MenuPop extends APopup implements OnItemClickListener
 {
 	@RootContext
 	Context context;
@@ -38,9 +38,9 @@ public class MenuPop extends AbasePopup implements OnItemClickListener
 	@Override
 	protected View initView()
 	{
-		View view = ManageUtil.getInflater().inflate(R.layout.pop_menu, null);
+		View view = ManageKit.getInflater().inflate(R.layout.pop_menu, null);
 		GridView gv = (GridView) view.findViewById(R.id.gv);
-		gv.setAdapter(new AbaseBaseAdapter<MenuItem>(MenuItemView.class, Abase.getContext(), addMenuItem()));
+		gv.setAdapter(new AAdapter<MenuItem>(MenuItemView.class, Abase.getContext(), addMenuItem()));
 		this.setAnimationStyle(R.style.AnimBottom);
 		gv.setOnItemClickListener(this);
 		return view;
@@ -58,7 +58,7 @@ public class MenuPop extends AbasePopup implements OnItemClickListener
 			this.dismiss();
 			if (fbreaderApp.Model.TOCTree.hasChildren() && App.getNowReadBook().isEpub()) fbreaderApp.runAction(ActionCode.SHOW_TOC);
 			else  {
-				IntentUtil.startSubIntent(context, TocActivity.class);
+				IntentKit.startSubIntent(context, TocActivity.class);
 				((Activity)context).overridePendingTransition(R.anim.activity_bottom_in, R.anim.keep_y);
 			}
 			break;

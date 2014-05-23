@@ -3,11 +3,9 @@ package org.geometerplus.fbreader.bookmodel;
 
 import java.util.List;
 
-import org.geometerplus.zlibrary.text.model.*;
 import org.geometerplus.fbreader.book.Book;
 import org.geometerplus.fbreader.formats.FormatPlugin;
-
-import com.jayqqaa12.abase.util.common.L;
+import org.geometerplus.zlibrary.text.model.ZLTextModel;
 
 public abstract class BookModel {
 	public static BookModel createModel(Book book) throws BookReadingException {

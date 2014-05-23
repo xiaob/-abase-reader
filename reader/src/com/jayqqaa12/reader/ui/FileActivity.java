@@ -18,11 +18,11 @@ import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jayqqaa12.abase.core.AbaseDao;
-import com.jayqqaa12.abase.core.adapter.AbaseExpandableListAdapter;
+import com.jayqqaa12.abase.core.ADao;
+import com.jayqqaa12.abase.core.activity.AExpandableListAdapter;
+import com.jayqqaa12.abase.kit.IntentKit;
+import com.jayqqaa12.abase.kit.common.T;
 import com.jayqqaa12.abase.model.Group;
-import com.jayqqaa12.abase.util.IntentUtil;
-import com.jayqqaa12.abase.util.common.T;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.BaseActivity;
 import com.jayqqaa12.reader.R;
@@ -45,17 +45,18 @@ public class FileActivity extends BaseActivity implements OnChildClickListener, 
 	ImageView iv_empty;
 	@Bean
 	FileEngine engine;
-	
-	AbaseExpandableListAdapter<BookFile>  adapter;
-	
-	private AbaseDao db = AbaseDao.create();
+
+	@Bean
+	ADao db;
 	private String parentFile;
+
+	AExpandableListAdapter<BookFile> adapter;
 
 	@AfterViews
 	public void init()
 	{
-		adapter= new AbaseExpandableListAdapter<BookFile>(FileGroupItemView.class, FileItemView.class, this);
-				
+		adapter = new AExpandableListAdapter<BookFile>(FileGroupItemView.class, FileItemView.class, this);
+
 		elv.setAdapter(adapter);
 		elv.setGroupIndicator(null);
 		setFileView(Environment.getExternalStorageDirectory().getPath());
@@ -120,8 +121,8 @@ public class FileActivity extends BaseActivity implements OnChildClickListener, 
 			{
 				Book book = new Book(f);
 				Book oldBook = db.findFirst(Selector.from(Book.class).where("path", "=", book.path));
-				if (oldBook == null)book= db.saveAndFind(book, Selector.from(Book.class).where("path", "=", book.path));
-				
+				if (oldBook == null) book = db.saveAndFind(book, Selector.from(Book.class).where("path", "=", book.path));
+
 				App.openBook(this, book);
 			}
 		}
@@ -141,7 +142,7 @@ public class FileActivity extends BaseActivity implements OnChildClickListener, 
 			BookFile file = adapter.getChild(groupPosition, childPosition);
 
 			if (new File(file.path).isDirectory()) ;// TODO
-			else IntentUtil.startSubIntent(this, DeleteBookDialog.class, new String[] { "file", "MSG" }, new Object[] { file,
+			else IntentKit.startSubIntent(this, DeleteBookDialog.class, new String[] { "file", "MSG" }, new Object[] { file,
 					DeleteBookDialog.DELETE_FILE });
 			return true;
 		}

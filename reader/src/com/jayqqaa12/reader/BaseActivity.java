@@ -7,10 +7,7 @@ import org.androidannotations.annotations.ViewById;
 import android.app.Activity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import com.jayqqaa12.reader.R;
 
 @EActivity
 public class BaseActivity extends Activity

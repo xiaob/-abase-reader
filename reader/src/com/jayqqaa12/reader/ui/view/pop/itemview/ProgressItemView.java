@@ -10,10 +10,7 @@ import org.geometerplus.zlibrary.text.view.ZLTextView;
 import android.content.Context;
 import android.view.View;
 import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
 
-import com.jayqqaa12.abase.util.common.L;
-import com.jayqqaa12.abase.util.common.T;
 import com.jayqqaa12.abase.view.BindView;
 import com.jayqqaa12.reader.R;
 

@@ -3,7 +3,7 @@ package com.jayqqaa12.reader.model.db;
 import java.io.File;
 import java.io.Serializable;
 
-import com.jayqqaa12.abase.util.Txt;
+import com.jayqqaa12.abase.kit.Txt;
 import com.jayqqaa12.reader.R;
 import com.lidroid.xutils.db.annotation.Finder;
 import com.lidroid.xutils.db.sqlite.FinderLazyLoader;

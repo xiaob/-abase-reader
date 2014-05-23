@@ -1,6 +1,7 @@
 package com.jayqqaa12.reader.ui.view.dialog;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.Extra;
@@ -12,8 +13,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.jayqqaa12.abase.core.AbaseDao;
-import com.jayqqaa12.abase.util.io.FileUtil;
+import com.jayqqaa12.abase.core.ADao;
+import com.jayqqaa12.abase.kit.io.FileKit;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.BookFile;
@@ -27,7 +28,9 @@ public class DeleteBookDialog extends Activity
 	public static final int DELETE_BOOK_AND_FILE = 1;
 	public static final int DELETE_BOOK = 2;
 	public static final int DELETE_FILE = 3;
-	private AbaseDao db = AbaseDao.create();
+
+	@Bean
+	ADao db;
 
 	@ViewById
 	CheckBox cb;
@@ -58,12 +61,12 @@ public class DeleteBookDialog extends Activity
 			break;
 		}
 	}
-	
+
 	@Override
 	protected void onDestroy()
 	{
 		super.onDestroy();
-		
+
 		App.removeObject("delete_book");
 	}
 
@@ -84,13 +87,13 @@ public class DeleteBookDialog extends Activity
 			switch (MSG)
 			{
 			case DELETE_BOOK_AND_FILE:
-				if (cb.isChecked()) FileUtil.deleteFile(book.path);
+				if (cb.isChecked()) FileKit.deleteFile(book.path);
 			case DELETE_BOOK:
 				db.delete(book);
-				db.delete(Toc.class, WhereBuilder.b("book_id", "=",book.id));
+				db.delete(Toc.class, WhereBuilder.b("book_id", "=", book.id));
 				break;
 			case DELETE_FILE:
-				FileUtil.deleteFile(file.path);
+				FileKit.deleteFile(file.path);
 				break;
 			}
 			break;

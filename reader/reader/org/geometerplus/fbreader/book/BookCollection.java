@@ -20,16 +20,26 @@
 package org.geometerplus.fbreader.book;
 
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
+import org.geometerplus.fbreader.bookmodel.BookReadingException;
+import org.geometerplus.fbreader.formats.FormatPlugin;
+import org.geometerplus.fbreader.formats.PluginCollection;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
 import org.geometerplus.zlibrary.core.filesystem.ZLPhysicalFile;
 import org.geometerplus.zlibrary.core.image.ZLImage;
 import org.geometerplus.zlibrary.text.view.ZLTextPosition;
-import org.geometerplus.fbreader.bookmodel.BookReadingException;
-import org.geometerplus.fbreader.formats.*;
-
-import com.jayqqaa12.abase.util.common.L;
 
 public class BookCollection extends AbstractBookCollection {
 	private final BooksDatabase myDatabase;

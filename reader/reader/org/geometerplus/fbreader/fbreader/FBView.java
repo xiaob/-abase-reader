@@ -20,11 +20,9 @@
 package org.geometerplus.fbreader.fbreader;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 
 import org.geometerplus.fbreader.bookmodel.BookModel;
 import org.geometerplus.fbreader.bookmodel.FBHyperlinkType;
-import org.geometerplus.fbreader.bookmodel.TOCTree;
 import org.geometerplus.fbreader.fbreader.options.PageTurningOptions;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
 import org.geometerplus.zlibrary.core.filesystem.ZLResourceFile;
@@ -42,15 +40,6 @@ import org.geometerplus.zlibrary.text.view.ZLTextView;
 import org.geometerplus.zlibrary.text.view.ZLTextWordRegionSoul;
 import org.geometerplus.zlibrary.text.view.style.ZLTextStyleCollection;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.RectF;
-import android.graphics.Paint.Style;
-import android.view.View.MeasureSpec;
-
-import com.jayqqaa12.abase.util.common.L;
 import com.jayqqaa12.reader.ui.view.BatteryView;
 
 public final class FBView extends ZLTextView

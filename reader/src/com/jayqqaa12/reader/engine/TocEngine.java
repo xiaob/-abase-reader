@@ -9,26 +9,32 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.androidannotations.annotations.Background;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EBean;
 import org.geometerplus.zlibrary.text.model.ZLTextModel;
 
-import com.jayqqaa12.abase.core.AbaseDao;
+import com.jayqqaa12.abase.core.ADao;
 import com.jayqqaa12.abase.core.listener.OnLoadStatus;
-import com.jayqqaa12.abase.util.MsgUtil;
-import com.jayqqaa12.abase.util.Txt;
-import com.jayqqaa12.abase.util.common.L;
+import com.jayqqaa12.abase.kit.MsgKit;
+import com.jayqqaa12.abase.kit.Txt;
+import com.jayqqaa12.abase.kit.common.L;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.model.db.Toc;
 
 @EBean
 public class TocEngine
 {
+	@Bean
+	ADao dao;
+	
+	
 	private static Pattern PN = Pattern.compile("第{1}[0-9一二三四五六七八九十百千]+[章回卷节集]{1}");
 	private static Set<String> keys = new HashSet<String>();
 	private static final char[] pattern = "第".toCharArray();
 	private static Matcher m;
 
 	public static List<Toc> tocList = new ArrayList<Toc>();
+	
 
 	public static boolean find(int index, char[] text, int offset, int length)
 	{
@@ -121,8 +127,8 @@ public class TocEngine
 		int count = zlTextModel.serachTop();
 		long end = System.currentTimeMillis();
 		L.i(" end time =" + (end - start) + "s" + " find search =" + count);
-		callback.onLoadStatus(MsgUtil.MSG_LOAD, null);
-		if (tocList.size() > 0) AbaseDao.create().saveAll(tocList);
+		callback.onLoadStatus(MsgKit.MSG_LOAD, null);
+		if (tocList.size() > 0) dao.saveAll(tocList);
 
 	}
 

@@ -7,11 +7,11 @@ import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;
 
 import android.content.Context;
 
-import com.jayqqaa12.abase.core.AbaseApp;
-import com.jayqqaa12.abase.util.IntentUtil;
+import com.jayqqaa12.abase.core.AApp;
+import com.jayqqaa12.abase.kit.IntentKit;
 import com.jayqqaa12.reader.model.db.Book;
 
-public class App extends AbaseApp
+public class App extends AApp
 {
 	/**
 	 * 当前页面的 Paragraph index
@@ -30,7 +30,7 @@ public class App extends AbaseApp
 	
 	public static void openBook(Context context,Book book){
 		setObject("book", book);
-		IntentUtil.startSubIntent(context, FBReader.class, new String[] { FBReader.BOOK_KEY, "goto_position" },
+		IntentKit.startSubIntent(context, FBReader.class, new String[] { FBReader.BOOK_KEY, "goto_position" },
 				new Object[] { book.path, true });
 	}
 	
