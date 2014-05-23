@@ -30,8 +30,8 @@ public final class DeleteBookDialog_
 {
 
     private final OnViewChangedNotifier onViewChangedNotifier_ = new OnViewChangedNotifier();
-    public final static String FILE_EXTRA = "file";
     public final static String MSG_EXTRA = "MSG";
+    public final static String FILE_EXTRA = "file";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,8 +76,8 @@ public final class DeleteBookDialog_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        cb = ((CheckBox) hasViews.findViewById(id.cb));
         tv = ((TextView) hasViews.findViewById(id.tv));
+        cb = ((CheckBox) hasViews.findViewById(id.cb));
         {
             View view = hasViews.findViewById(id.tv_delete);
             if (view!= null) {
@@ -114,11 +114,11 @@ public final class DeleteBookDialog_
     private void injectExtras_() {
         Bundle extras_ = getIntent().getExtras();
         if (extras_!= null) {
-            if (extras_.containsKey(FILE_EXTRA)) {
-                file = ((BookFile) extras_.getSerializable(FILE_EXTRA));
-            }
             if (extras_.containsKey(MSG_EXTRA)) {
                 MSG = extras_.getInt(MSG_EXTRA);
+            }
+            if (extras_.containsKey(FILE_EXTRA)) {
+                file = ((BookFile) extras_.getSerializable(FILE_EXTRA));
             }
         }
     }
@@ -171,13 +171,13 @@ public final class DeleteBookDialog_
             }
         }
 
-        public DeleteBookDialog_.IntentBuilder_ file(BookFile file) {
-            intent_.putExtra(FILE_EXTRA, ((Serializable) file));
+        public DeleteBookDialog_.IntentBuilder_ MSG(int MSG) {
+            intent_.putExtra(MSG_EXTRA, MSG);
             return this;
         }
 
-        public DeleteBookDialog_.IntentBuilder_ MSG(int MSG) {
-            intent_.putExtra(MSG_EXTRA, MSG);
+        public DeleteBookDialog_.IntentBuilder_ file(BookFile file) {
+            intent_.putExtra(FILE_EXTRA, ((Serializable) file));
             return this;
         }
 

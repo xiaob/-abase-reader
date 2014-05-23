@@ -47,7 +47,7 @@ import android.view.Menu;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
-import com.jayqqaa12.abase.view.APopup;
+import com.jayqqaa12.abase.core.APopup;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.ui.view.pop.MenuPop;
 import com.jayqqaa12.reader.ui.view.pop.itemview.ProgressItemView;

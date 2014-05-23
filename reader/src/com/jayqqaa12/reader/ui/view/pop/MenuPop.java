@@ -17,11 +17,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
+import com.jayqqaa12.abase.core.APopup;
 import com.jayqqaa12.abase.core.Abase;
 import com.jayqqaa12.abase.core.activity.AAdapter;
 import com.jayqqaa12.abase.kit.IntentKit;
 import com.jayqqaa12.abase.kit.ManageKit;
-import com.jayqqaa12.abase.view.APopup;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.MenuItem;

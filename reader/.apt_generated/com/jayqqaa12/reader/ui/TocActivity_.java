@@ -78,12 +78,12 @@ public final class TocActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        tv_head_logo = ((TextView) hasViews.findViewById(com.jayqqaa12.reader.R.id.tv_head_logo));
-        tv_head = ((TextView) hasViews.findViewById(com.jayqqaa12.reader.R.id.tv_head));
         iv_head_right = ((ImageView) hasViews.findViewById(com.jayqqaa12.reader.R.id.iv_head_right));
+        tv_head = ((TextView) hasViews.findViewById(com.jayqqaa12.reader.R.id.tv_head));
+        tv_head_logo = ((TextView) hasViews.findViewById(com.jayqqaa12.reader.R.id.tv_head_logo));
         iv_head_left = ((ImageView) hasViews.findViewById(com.jayqqaa12.reader.R.id.iv_head_left));
-        pb = ((ProgressBar) hasViews.findViewById(com.jayqqaa12.reader.R.id.pb));
         lv = ((ListView) hasViews.findViewById(com.jayqqaa12.reader.R.id.lv));
+        pb = ((ProgressBar) hasViews.findViewById(com.jayqqaa12.reader.R.id.pb));
         {
             View view = hasViews.findViewById(com.jayqqaa12.reader.R.id.iv_head_left);
             if (view!= null) {

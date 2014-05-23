@@ -18,7 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import com.jayqqaa12.abase.kit.common.T;
+import com.jayqqaa12.abase.view.toast.T;
 import com.jayqqaa12.reader.R;
 
 public class ZLAndroidWidget extends View implements ZLViewWidget
