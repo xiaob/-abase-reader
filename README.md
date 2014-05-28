@@ -38,7 +38,7 @@
 Ö§¸¶±¦¾èÔùÕÊºÅ jayqqaa12@yahoo.com.cn
 
 É¨Ãè¶şÎ¬Âë¾èÔù
-![Screenshot 12shu-zfb](http://git.oschina.net/jayqqaa12/abase-reader/raw/master/Screenshot/12shu-zfb.png "Screenshot 12shu-zfb") <br> <br>
+![Screenshot 12shu-zfb](http://git.oschina.net/jayqqaa12/JFinal_Authority/raw/master/Screenshot/12shu-zfb.png "Screenshot 12shu-zfb") <br> <br>
 
 <br>
 
