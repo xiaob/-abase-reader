@@ -14,7 +14,7 @@ import org.androidannotations.annotations.EBean;
 import org.geometerplus.zlibrary.text.model.ZLTextModel;
 
 import com.jayqqaa12.abase.core.ADao;
-import com.jayqqaa12.abase.core.listener.OnLoadStatus;
+import com.jayqqaa12.abase.core.listener.OnLoadStatusListener;
 import com.jayqqaa12.abase.kit.MsgKit;
 import com.jayqqaa12.abase.kit.Txt;
 import com.jayqqaa12.abase.kit.common.L;
@@ -120,14 +120,14 @@ public class TocEngine
 	}
 
 	@Background
-	public void readToc(ZLTextModel zlTextModel, OnLoadStatus callback)
+	public void readToc(ZLTextModel zlTextModel, OnLoadStatusListener callback)
 	{
 		L.i("start read toc ");
 		long start = System.currentTimeMillis();
 		int count = zlTextModel.serachTop();
 		long end = System.currentTimeMillis();
 		L.i(" end time =" + (end - start) + "s" + " find search =" + count);
-		callback.onLoadStatus(MsgKit.MSG_LOAD, null);
+		callback.onLoadStatus(null,MsgKit.MSG_LOAD);
 		if (tocList.size() > 0) dao.saveAll(tocList);
 
 	}

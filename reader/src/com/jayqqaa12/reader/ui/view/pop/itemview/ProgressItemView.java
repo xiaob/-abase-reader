@@ -11,7 +11,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.SeekBar;
 
-import com.jayqqaa12.abase.view.BindView;
+import com.jayqqaa12.abase.core.BindView;
 import com.jayqqaa12.reader.R;
 
 @EViewGroup(R.layout.pop_progress)

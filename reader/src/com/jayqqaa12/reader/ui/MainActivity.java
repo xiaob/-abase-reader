@@ -10,10 +10,15 @@ import android.widget.GridView;
 
 import com.igexin.sdk.PushManager;
 import com.jayqqaa12.abase.core.ADao;
+import com.jayqqaa12.abase.core.AHttp;
 import com.jayqqaa12.abase.core.activity.AAdapter;
+import com.jayqqaa12.abase.kit.common.L;
+import com.jayqqaa12.abase.kit.common.T;
 import com.jayqqaa12.reader.R;
 import com.jayqqaa12.reader.model.db.Book;
 import com.jayqqaa12.reader.ui.adapter.itemview.BookItemView;
+import com.lidroid.xutils.http.ResponseInfo;
+import com.lidroid.xutils.http.callback.RequestCallBack;
 
 @EActivity(R.layout.activity_main)
 public class MainActivity extends Activity
@@ -28,12 +33,13 @@ public class MainActivity extends Activity
 	@AfterViews
 	public void init()
 	{
-		// start push service
 		PushManager.getInstance().initialize(this);
+		
 
 		adapter = new AAdapter<Book>(BookItemView.class, this);
 		gv.setAdapter(adapter);
 		setData();
+		
 	}
 
 	@Override

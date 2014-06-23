@@ -10,7 +10,7 @@ import java.util.Set;
 import org.androidannotations.annotations.EBean;
 
 import com.jayqqaa12.abase.model.Group;
-import com.jayqqaa12.abase.view.toast.T;
+import com.jayqqaa12.abase.kit.common.*;
 import com.jayqqaa12.reader.model.BookFile;
 
 @EBean

@@ -76,8 +76,8 @@ public final class DeleteBookDialog_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        tv = ((TextView) hasViews.findViewById(id.tv));
         cb = ((CheckBox) hasViews.findViewById(id.cb));
+        tv = ((TextView) hasViews.findViewById(id.tv));
         {
             View view = hasViews.findViewById(id.tv_delete);
             if (view!= null) {

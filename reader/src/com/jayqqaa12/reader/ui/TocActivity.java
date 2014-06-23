@@ -16,7 +16,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.jayqqaa12.abase.core.activity.AAdapter;
-import com.jayqqaa12.abase.core.listener.OnLoadStatus;
+import com.jayqqaa12.abase.core.listener.OnLoadStatusListener;
 import com.jayqqaa12.abase.kit.MsgKit;
 import com.jayqqaa12.reader.App;
 import com.jayqqaa12.reader.BaseActivity;
@@ -27,7 +27,7 @@ import com.jayqqaa12.reader.ui.adapter.itemview.TocItemView;
 
 @Fullscreen
 @EActivity(R.layout.activity_toc)
-public class TocActivity extends BaseActivity implements OnLoadStatus
+public class TocActivity extends BaseActivity implements OnLoadStatusListener
 {
 	@ViewById
 	ListView lv;
@@ -74,15 +74,17 @@ public class TocActivity extends BaseActivity implements OnLoadStatus
 	}
 
 	@UiThread
-	public void onLoadStatus(int what, Object obj)
+	public void onLoadStatus(Object obj, int status)
 	{
-		switch (what)
+		switch (status)
 		{
 		case MsgKit.MSG_LOAD:
 			setData(TocEngine.tocList);
 			break;
 		}
 	}
+	
+ 
 
 	@ItemClick
 	public void lvItemClicked(Toc item)
@@ -97,5 +99,7 @@ public class TocActivity extends BaseActivity implements OnLoadStatus
 		super.finish();
 		overridePendingTransition(R.anim.keep_y, R.anim.activity_bottom_out);
 	}
+
+
 
 }

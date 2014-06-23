@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.igexin.sdk.PushConsts;
+import com.jayqqaa12.abase.kit.common.L;
 
 
 /***
@@ -40,9 +41,11 @@ public class PushReceiver extends BroadcastReceiver
 			}
 			break;
 		case PushConsts.GET_CLIENTID:
+			
 			// 获取ClientID(CID)
 			// 第三方应用需要将CID上传到第三方服务器，并且将当前用户帐号和CID进行关联，以便日后通过用户帐号查找CID进行消息推送
-//			String cid = bundle.getString("clientid");
+			String cid = bundle.getString("clientid");
+			L.i("reader get clientid ="+cid);
 
 			break;
 		case PushConsts.THIRDPART_FEEDBACK:

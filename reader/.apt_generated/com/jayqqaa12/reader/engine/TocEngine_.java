@@ -7,7 +7,7 @@ package com.jayqqaa12.reader.engine;
 
 import android.content.Context;
 import com.jayqqaa12.abase.core.ADao_;
-import com.jayqqaa12.abase.core.listener.OnLoadStatus;
+import com.jayqqaa12.abase.core.listener.OnLoadStatusListener;
 import org.androidannotations.api.BackgroundExecutor;
 import org.geometerplus.zlibrary.text.model.ZLTextModel;
 
@@ -36,7 +36,7 @@ public final class TocEngine_
     }
 
     @Override
-    public void readToc(final ZLTextModel zlTextModel, final OnLoadStatus callback) {
+    public void readToc(final ZLTextModel zlTextModel, final OnLoadStatusListener callback) {
         BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0, "") {
 
 

@@ -69,8 +69,8 @@ public final class FileItemView_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        lv_iv = ((ImageView) hasViews.findViewById(id.lv_iv));
         lv_tv = ((TextView) hasViews.findViewById(id.lv_tv));
+        lv_iv = ((ImageView) hasViews.findViewById(id.lv_iv));
     }
 
 }

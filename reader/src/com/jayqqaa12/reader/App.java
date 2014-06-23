@@ -7,8 +7,10 @@ import org.geometerplus.zlibrary.ui.android.library.ZLAndroidLibrary;
 
 import android.content.Context;
 
+import com.igexin.sdk.PushManager;
 import com.jayqqaa12.abase.core.AApp;
 import com.jayqqaa12.abase.kit.IntentKit;
+import com.jayqqaa12.abase.kit.sys.ReceiverKit;
 import com.jayqqaa12.reader.model.db.Book;
 
 public class App extends AApp
@@ -26,6 +28,7 @@ public class App extends AApp
 		new ZLSQLiteConfig(this);
 		new ZLAndroidImageManager();
 		new ZLAndroidLibrary(this);
+
 	}
 	
 	public static void openBook(Context context,Book book){
